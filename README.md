@@ -7,6 +7,7 @@ In the website, users can get access to the latest pricing information, historic
 To build this application the following tools were used:
 - Financial data APIs: <a href='https://alpaca.markets/data'>Alpaca</a>, <a href='https://www.alphavantage.co/'>Alpha Vantage</a> 
 - News API: <a href='https://newsapi.org/'>NewsAPI</a>
+- Flask
 - Chart.js
 - Firebase
 - Pyrebase
