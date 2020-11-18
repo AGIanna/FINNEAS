@@ -4,26 +4,26 @@ import pyrebase
 
 ALPACA_HOST = 'https://data.alpaca.markets'
 alpaca_session = requests.Session()
-alpaca_session.headers["APCA-API-KEY-ID"] = 'PK9SPEPNIYHXF6MH3PQI'
-alpaca_session.headers["APCA-API-SECRET-KEY"] = 'zMU0UivOioKFg8WTFKMk7mAPcrVbqvTm6FNeVAWJ'
+alpaca_session.headers["APCA-API-KEY-ID"] = keys['ALPACA']['KEY']
+alpaca_session.headers["APCA-API-SECRET-KEY"] = keys['ALPACA']['SECRET_KEY']
 
 ALPHAV_HOST = 'https://www.alphavantage.co/query'
 alphav_session = requests.Session()
-alphav_session.params["apikey"] = '29GR5RNIYPUF47T1'
+alphav_session.params["apikey"] = keys['ALPHAV']['KEY']
 
 NEWSAPI_HOST = 'https://newsapi.org/v2'
 newsapi_session = requests.Session()
-newsapi_session.params["apiKey"] = 'd65c94e8083e4fa8b1f1a8d3a2ab8ebe'
+newsapi_session.params["apiKey"] = keys['NEWS']['KEY']
 
 
 firebaseConfig = {
-    'apiKey': "AIzaSyAu2Jbm6u_u3D9DuZ52K0aeSlInRfNhSxo",
-    'authDomain': "finneas-ca058.firebaseapp.com",
-    'databaseURL': "https://finneas-ca058.firebaseio.com",
-    'projectId': "finneas-ca058",
-    'storageBucket': "finneas-ca058.appspot.com",
-    'messagingSenderId': "345418517191",
-    'appId': "1:345418517191:web:1f83b7964ff713d23b0ce2"
+    'apiKey': firebase_db['KEY']
+    'authDomain': firebase_db['AUTH_DOMAIN'],
+    'databaseURL': firebase_db['URL'],
+    'projectId': firebase_db['PROJECT_ID'],
+    'storageBucket': firebase_db['BUCKET'],
+    'messagingSenderId': firebase_db['SENDER_ID'],
+    'appId': firebase_db['APP_ID']
   }
 
 firebase = pyrebase.initialize_app(firebaseConfig)
