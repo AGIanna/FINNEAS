@@ -17,7 +17,7 @@ newsapi_session.params["apiKey"] = keys['NEWS']['KEY']
 
 
 firebaseConfig = {
-    'apiKey': firebase_db['KEY']
+    'apiKey': firebase_db['KEY'],
     'authDomain': firebase_db['AUTH_DOMAIN'],
     'databaseURL': firebase_db['URL'],
     'projectId': firebase_db['PROJECT_ID'],
